@@ -1,0 +1,14 @@
+.navbar-brand {
+  color: #019e71;
+  font-weight: 700;
+}
+.navbar-light .navbar-nav .nav-link {
+  font-size: 14px;
+  color: #484848;
+  font-weight: 500;
+}
+
+.bg-light {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid rgb(235, 235, 235) !important;
+}

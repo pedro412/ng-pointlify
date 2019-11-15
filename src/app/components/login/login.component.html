@@ -1,23 +1,32 @@
-<div class="container pt-5">
-    <h1 class="text-center">Inicia Sesión</h1>
-    <div class="text-center">
-        <button class="btn btn-warning" (click)="authService.googleSignin()">Inicia con Google</button>
+<section class="container mt-5">
+    <div class="card auth-card">
+        <div class="card-body">
+            <h1 class="text-center">Inicia sesión</h1>
+
+            <button class="btn btn-twitter btn-block">
+                Inicia sesión con Twitter
+            </button>
+
+            <button class="btn btn-facebook btn-block">
+                Inicia sesión con Facebook
+            </button>
+
+            <form>
+                <p class="text-center mt-3">o</p>
+                <div class="form-group">
+                    <input type="email" class="form-control" aria-describedby="correo" placeholder="Correo electrónico">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Contraseña">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success btn-block">Inicia sesión</button>
+                </div>
+                <div class="text-center mt-3">
+                    <span>¿Aún no tienes cuenta? </span>
+                    <a href="#">Regístrate</a>
+                </div>
+            </form>
+        </div>
     </div>
-    <form class="login-form">
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password">
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="rememberMe">
-            <label class="form-check-label" for="rememberMe">Recordarme</label>
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Inicia sesión</button>
-        </div>
-    </form>
-</div>
+</section>
