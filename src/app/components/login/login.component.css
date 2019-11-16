@@ -8,6 +8,7 @@
 }
 
 .btn-facebook {
+  position: relative;
   background-color: #4267b2;
   border-color: #4267b2;
   color: #fff;
@@ -19,10 +20,25 @@
   color: #fff;
 }
 
-.btn-twitter {
-  background-color: #1da1f2;
-  border-color: #1da1f2;
-  color: #fff;
+.btn-google {
+  position: relative;
+  background-color: #fff;
+  border-color: #4285f4;
+  color: #5b5f64;
+}
+
+.img-logo-google {
+  position: absolute;
+  top: 8px;
+  left: 35px;
+  width: 30px;
+}
+
+.img-logo-facebook {
+  position: absolute;
+  top: 6px;
+  left: 37px;
+  width: 20px;
 }
 
 .btn-twitter:hover {

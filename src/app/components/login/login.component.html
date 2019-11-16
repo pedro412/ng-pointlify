@@ -3,12 +3,16 @@
         <div class="card-body">
             <h1 class="text-center">Inicia sesión</h1>
 
-            <button (click)="this.authService.googleSignin()" class="btn btn-twitter btn-block">
-                Acceder con Google
+            <button (click)="this.authService.googleSignin()" class="btn btn-google btn-block">
+                <img class="img-fluid img-logo-google" src="assets/Google__G__Logo.svg" alt="Google">
+                <span>Acceder con
+                    Google</span>
             </button>
 
             <button class="btn btn-facebook btn-block">
-                Acceder con Facebook
+                <img class="img-fluid img-logo-facebook" src="assets/facebook-f-brands.svg" alt="Facebook">
+                <span>Acceder con
+                    Facebook</span>
             </button>
 
             <form>
@@ -20,7 +24,7 @@
                     <input type="password" class="form-control" placeholder="Contraseña">
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success btn-block">Inicia sesión</button>
+                    <button type="button" class="btn btn-success btn-block">Inicia sesión</button>
                 </div>
                 <div class="text-center mt-3">
                     <span>¿Aún no tienes cuenta? </span>

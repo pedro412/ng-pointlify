@@ -10,15 +10,22 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { InventoryComponent } from './components/inventory/inventory.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InventoryComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    InventoryComponent,
+    NavbarComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

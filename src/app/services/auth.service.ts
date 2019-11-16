@@ -38,6 +38,15 @@ export class AuthService {
     return this.updateUserData(credential.user);
   }
 
+  async emailAndPasswordSignup(email: string, password: string) {
+    const provider = new auth.EmailAuthProvider();
+    const credential = await this.afAuth.auth.createUserWithEmailAndPassword(
+      email,
+      password
+    );
+    console.log(credential);
+  }
+
   async signOut() {
     await this.afAuth.auth.signOut();
     return this.router.navigate(['/login']);

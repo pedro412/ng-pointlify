@@ -16,9 +16,20 @@
                 <a class="nav-link" href="#">Vender</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">{{user.displayName}}</a>
+                <div class="btn-group" dropdown>
+                    <button id="button-basic" dropdownToggle type="button" class="btn-dropdown dropdown-toggle"
+                        aria-controls="dropdown-basic">
+                        {{user.displayName}} <span class="caret"></span>
+                    </button>
+                    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu"
+                        aria-labelledby="button-basic">
+                        <li (click)="this.authService.signOut()" role="menuitem"><a class="dropdown-item"
+                                href="javascript:0">Salir</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
+
         <ng-template #login>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">

@@ -12,3 +12,12 @@
   background-color: #ffffff !important;
   border-bottom: 1px solid rgb(235, 235, 235) !important;
 }
+
+.btn-dropdown {
+  border: none;
+  padding: 8px;
+  background-color: white;
+  font-size: 16px;
+  color: #484848;
+  font-weight: 500;
+}
