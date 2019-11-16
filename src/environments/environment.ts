@@ -5,13 +5,14 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyAkOxx5s1FC2fKyz3UJbXr9gAKKgs0kZao',
-    authDomain: 'postal-2bc27.firebaseapp.com',
-    databaseURL: 'https://postal-2bc27.firebaseio.com',
-    projectId: 'postal-2bc27',
-    storageBucket: 'postal-2bc27.appspot.com',
-    messagingSenderId: '77746924902',
-    appId: '1:77746924902:web:b8715376bc6b6d48'
+    apiKey: 'AIzaSyCCMm_HXl6r5iPgxXy06CPBlif1i4Zo_tM',
+    authDomain: 'pointlify.firebaseapp.com',
+    databaseURL: 'https://pointlify.firebaseio.com',
+    projectId: 'pointlify',
+    storageBucket: 'pointlify.appspot.com',
+    messagingSenderId: '735465903923',
+    appId: '1:735465903923:web:84c57619d8dc2a7d111046',
+    measurementId: 'G-BFB2T1RPVP'
   }
 };
 
