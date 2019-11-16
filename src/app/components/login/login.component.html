@@ -3,12 +3,12 @@
         <div class="card-body">
             <h1 class="text-center">Inicia sesión</h1>
 
-            <button class="btn btn-twitter btn-block">
-                Inicia sesión con Twitter
+            <button (click)="this.authService.googleSignin()" class="btn btn-twitter btn-block">
+                Acceder con Google
             </button>
 
             <button class="btn btn-facebook btn-block">
-                Inicia sesión con Facebook
+                Acceder con Facebook
             </button>
 
             <form>

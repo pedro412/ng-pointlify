@@ -8,13 +8,27 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+        <ul *ngIf="this.authService.user$ | async as user; else login" class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#">Inventario</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Vender</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">{{user.displayName}}</a>
+            </li>
         </ul>
+        <ng-template #login>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login">Inicia sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registrate</a>
+                </li>
+            </ul>
+        </ng-template>
+
     </div>
 </nav>
