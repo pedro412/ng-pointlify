@@ -1,17 +1,17 @@
 <section class="container mt-4">
     <div class="card auth-card">
         <div class="card-body">
-            <h1 class="text-center">Inicia sesión</h1>
+            <h1 class="text-center">Registrate</h1>
 
             <button (click)="this.authService.googleSignin()" class="btn btn-google btn-block">
                 <img class="img-fluid img-logo-google" src="assets/Google__G__Logo.svg" alt="Google">
-                <span>Acceder con
+                <span>Continuar con
                     Google</span>
             </button>
 
             <button class="btn btn-facebook btn-block">
                 <img class="img-fluid img-logo-facebook" src="assets/facebook-f-brands.svg" alt="Facebook">
-                <span>Acceder con
+                <span>Continuar con
                     Facebook</span>
             </button>
 
@@ -23,12 +23,15 @@
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="Contraseña">
                 </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Confirma tu contraseña">
+                </div>
                 <div class="text-center">
-                    <button type="button" class="btn btn-success btn-block">Inicia sesión</button>
+                    <button type="button" class="btn btn-success btn-block">Registrate</button>
                 </div>
                 <div class="text-center mt-3">
-                    <span>¿Aún no tienes cuenta? </span>
-                    <a routerLink="/register">Regístrate</a>
+                    <span>¿Ya tienes cuenta? </span>
+                    <a routerLink="/login">Inicia sesión</a>
                 </div>
             </form>
         </div>

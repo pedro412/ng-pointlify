@@ -34,8 +34,14 @@ export class AuthService {
 
   async googleSignin() {
     const provider = new auth.GoogleAuthProvider();
-    const credential = await this.afAuth.auth.signInWithPopup(provider);
-    return this.updateUserData(credential.user);
+
+    try {
+      const credential = await this.afAuth.auth.signInWithPopup(provider);
+      this.router.navigate(['/inventory']);
+      return this.updateUserData(credential.user);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async emailAndPasswordSignup(email: string, password: string) {

@@ -11,13 +11,15 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { InventoryComponent } from './components/inventory/inventory.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     InventoryComponent,
-    NavbarComponent
+    NavbarComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
