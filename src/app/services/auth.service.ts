@@ -44,13 +44,31 @@ export class AuthService {
     }
   }
 
-  async emailAndPasswordSignup(email: string, password: string) {
-    const provider = new auth.EmailAuthProvider();
-    const credential = await this.afAuth.auth.createUserWithEmailAndPassword(
-      email,
-      password
-    );
-    console.log(credential);
+  async emailAndPasswordSignup(user: any) {
+    const { email, password, displayName } = user;
+
+    try {
+      const credential = await this.afAuth.auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+
+      const userRef: AngularFirestoreDocument<User> = this.afs.doc(
+        `users/${credential.user.uid}`
+      );
+
+      const data = {
+        uid: credential.user.uid,
+        email: credential.user.email,
+        displayName,
+        photoURL: credential.user.photoURL
+      };
+
+      this.router.navigate(['/inventory']);
+      return userRef.set(data, { merge: true });
+    } catch (error) {
+      return error;
+    }
   }
 
   async signOut() {
