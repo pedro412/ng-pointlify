@@ -44,6 +44,18 @@ export class AuthService {
     }
   }
 
+  async emailAndPasswordSingin(user: any) {
+    const { email, password } = user;
+
+    try {
+      const credential = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
+      this.router.navigate(['/inventory']);
+      return;
+    } catch (error) {
+      return error;
+    }
+  }
+
   async emailAndPasswordSignup(user: any) {
     const { email, password, displayName } = user;
 
