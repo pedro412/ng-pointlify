@@ -1,4 +1,17 @@
-<div class="container mt-5">
-    <h1>Inventario</h1>
-    <p>Administra tus productos</p>
+<div class="container container-bordered mt-5">
+    <div class="header-action d-flex justify-content-between">
+        <div class="header-action-text">
+            <h1>Inventario</h1>
+            <p>Administra tus productos</p>
+        </div>
+        <div class="header-action-button">
+            <button class="btn btn-success">Agregar nuevo</button>
+        </div>
+    </div>
+
+    <div *ngIf="!products" class="text-warning">
+        <div class="alert alert-warning" role="alert">
+            Aún no tienes productos, puedes empezar por agregar nuevos productos <a href="#">aquí</a>
+        </div>
+    </div>
 </div>

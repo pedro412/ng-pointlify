@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginWithEmailAndPassword(f: NgForm) {
-    console.log(f.value);
     this.isLoading = true;
     this.authService.emailAndPasswordSingin(f.value).then(resp => {
       this.isLoading = false;
@@ -28,17 +27,21 @@ export class LoginComponent implements OnInit {
         return;
       }
 
-      if (resp.code === 'auth/wrong-password') {
-        return this.error = 'Credenciales incorrectas';
-      }
-
-      if (resp.code === 'auth/user-not-found') {
-        return this.error = 'Credenciales incorrectas';
-      }
-
-      if (resp.code === 'auth/too-many-requests') {
-        return this.error = 'Muchos intentos fallidos intente más tarde';
-      }
+      this.error = this.handleLoginErrors(resp.code);
     });
+  }
+
+  handleLoginErrors(code: string) {
+    if (code === 'auth/wrong-password') {
+      return 'Credenciales incorrectas';
+    }
+
+    if (code === 'auth/user-not-found') {
+      return 'Credenciales incorrectas';
+    }
+
+    if (code === 'auth/too-many-requests') {
+      return 'Muchos intentos fallidos intente más tarde';
+    }
   }
 }

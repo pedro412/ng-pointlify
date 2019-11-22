@@ -17,6 +17,12 @@ h2 {
   font-size: 24px;
 }
 
+.container-bordered {
+  border: solid 1px #ebebeb;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .table {
   color: #484848 !important;
 }
