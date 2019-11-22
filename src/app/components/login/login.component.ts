@@ -11,7 +11,7 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent implements OnInit {
   isLoading = false;
   error: string;
-  constructor(public authService: AuthService, private router: Router) {}
+  constructor(public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     if (this.authService.user$) {
