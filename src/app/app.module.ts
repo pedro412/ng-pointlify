@@ -13,6 +13,7 @@ import { InventoryComponent } from './components/inventory/inventory.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { RegisterComponent } from './components/register/register.component';
+import { NewProductComponent } from './components/new-product/new-product.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegisterComponent } from './components/register/register.component';
     LoginComponent,
     InventoryComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,
