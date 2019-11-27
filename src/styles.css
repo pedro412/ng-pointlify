@@ -17,6 +17,10 @@ h2 {
   font-size: 24px;
 }
 
+label {
+  font-weight: 500;
+}
+
 .container-bordered {
   border: solid 1px #ebebeb;
   padding-top: 15px;

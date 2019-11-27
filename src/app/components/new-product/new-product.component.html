@@ -3,26 +3,26 @@
     <br />
     <div class="row">
         <div class="col-md-7">
-            <form>
+            <form ngNativeValidte #f="ngForm" (ngSubmit)="submit(f)">
                 <div class="form-group">
                     <label for="nombre">Nombre del producto</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="" />
+                    <input ngModel name="name" type="text" class="form-control" id="nombre" required />
                 </div>
                 <div class="form-group">
                     <label for="categoria">Categoría</label>
-                    <input type="text" class="form-control" id="categoria" placeholder="" />
+                    <input ngModel name="category" type="text" class="form-control" id="categoria" required />
                 </div>
                 <div class="form-group">
                     <label for="Precio">Precio + IVA</label>
-                    <input type="number" class="form-control" id="Precio" placeholder="" />
+                    <input ngModel name="price" type="number" class="form-control" id="Precio" required />
                 </div>
                 <div class="form-group">
                     <label for="descripcion">Descripción</label>
-                    <input type="text" class="form-control" id="descripcion" placeholder="" />
+                    <input ngModel name="description" type="text" class="form-control" id="descripcion" />
                 </div>
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">En existencias</label>
+                    <input ngModel name="inStock" type="checkbox" class="form-check-input" id="inStock" />
+                    <label class="form-check-label" for="inStock">En existencias</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Agregar</button>
             </form>

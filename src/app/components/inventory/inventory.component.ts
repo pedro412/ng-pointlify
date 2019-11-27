@@ -18,10 +18,11 @@ export class InventoryComponent implements OnInit {
   ngOnInit() {
     this.authService.user$.subscribe(resp => {
       this.uid = resp.uid;
+      console.log(this.uid);
 
-      this.afs.doc<any[]>(`products/${this.uid}`).valueChanges().subscribe(data => {
-        this.products = data;
-       });
+      this.afs.collection<any[]>(`/products/`).doc(`${this.uid}`).get().subscribe(resp => {
+        console.log(resp);
+      });
 
     });
 
